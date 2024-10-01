@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+}
+
+.section-1 img {
+    position: absolute;
+    top: -100px;
+}
+.section-3 .card {
+    width: 33.33%;
+    transition: all 0.5s ease;
+}
+.section-3 .card-1:hover {
+    width: 70%;
+    transition: all 0.5s ease;
+}
+.section-3 .card-2:hover {
+    width: 70%;
+    transition: all 0.5s ease;
+}
+.section-3 .card-3:hover {
+    width: 70%;
+    transition: all 0.5s ease;
+}
+
+.btn-learnmore::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0%;
+    width: 0px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: black;
+    transition: 0.5s all ease;
+}
+.btn-learnmore:hover::after {
+    content: 'more...';
+    position: absolute;
+    left: 0;
+    top: 0%;
+    width: 100%;
+    transition: 0.5s all ease;
+}
+
+.menu-item-1 {
+    background-size: cover;
+    background-image: url('../../assets/food-items/coffee.jpeg');
+}
+.menu-item-2 {
+    background-size: cover;
+    background-image: url('../../assets/food-items/board.jpg');
+}
+.menu-item-3 {
+    background-size: cover;
+    background-image: url('../../assets/chicken-gardenblue-with-vegetables-plate.jpg');
+}
+.menu-item-4 {
+    background-size: cover;
+    background-image: url('../../assets/beef-steak-garnished-with-creamy-sauce-served-with-fried-aubergine-ketcup.jpg');
+}
+
+.menu-item {
+    transition: 0.5s ease all;
+}
+.menu-item:hover {
+    transform: scale(0.99);
+    transition: 0.5s ease all;
+}
+.menu-item .menu-item-inner {
+    transition: 0.7s all ease;
+}
+.menu-item:hover .menu-item-inner{
+    background-color: transparent;
+    transition: 0.7s all ease;
+}
+.menu-item:hover .menu-item-inner > *{
+    display: none;
+}
+
+.container-time {
+    background-image: url("../../assets/place/table-5356682.jpg");
+    background-size: cover;
+    background-position: center;
+}

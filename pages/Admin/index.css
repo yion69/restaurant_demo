@@ -1,0 +1,32 @@
+.modal-hidden {
+    visibility: hidden;
+}
+
+.modal-visible {
+    visibility: visible;
+    transition: visibility 0.3s;
+}
+
+.modal-delete-hidden {
+    visibility: hidden;
+    transform: translateY(-200px);
+    transition: transform 0.3s, visibility 0.5;
+}
+.modal-delete-visible {
+    visibility: visible;
+    transform: translateY(0px);
+    transition: transform 0.5s;
+    transition: transform 0.3s, visibility 0.5;
+}
+
+.modal-update-hidden {
+    visibility: hidden;
+    transform: translateY(-200px);
+    transition: transform 0.3s, visibility 0.5;
+}
+.modal-update-visible {
+    visibility: visible;
+    transform: translateY(0px);
+    transition: transform 0.5s;
+    transition: transform 0.3s, visibility 0.5;
+}

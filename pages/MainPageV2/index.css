@@ -1,0 +1,234 @@
+body {
+  width: 100dvw;
+  /* height: 400dvh; */ 
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+
+  --zinc-950: #09090b;
+  --zinc-900: #18181b;
+  --zinc-800: #27272a;
+  --zinc-700: #3f3f46;
+  --zinc-600: #52525b;
+  --zinc-500: #6b7280;
+  --zinc-400: #a1a1aa;
+  --zinc-300: #d4d4d8;
+  --zinc-200: #e4e4e7;
+  --zinc-100: #f4f4f5;
+  --zinc-50: #fafafa;
+}
+
+/* Navbar */
+#navbar {
+  z-index: 9999;
+}
+.nav-item {
+  position: relative;
+}
+.nav-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  border: 2px solid black;  
+  border-left: none;
+  border-right: none;
+  transition: all 0.5s ease;
+}
+.nav-item:hover::after {
+  width: 100%;
+  height: 2px;
+}
+
+.menu {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  padding: 0;
+}
+.line {
+  fill: none;
+  stroke-width: 4;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.line-inactive {
+  stroke: var(--zinc-800);
+}
+.line-active {
+  stroke: var(--zinc-100);
+}
+.line1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 4;
+}
+.line2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 4;
+}
+.line3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 4;
+}
+.opened .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 4;
+}
+.opened .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 4;
+}
+.opened .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 4;
+}
+
+/* NavMenu */
+.nav-menu {
+  transition: height 0.5s ease, background-color 0.2s, visibility 0.1s;
+}
+.nav-menu-inactive {
+  height: 100%;
+  visibility: hidden;
+  background-color: rgba(0,0,0, 0);
+  z-index: -10;
+}
+.nav-menu-active {
+  height: 100dvh;
+  z-index: 1;
+  visibility: visible;
+  background-color: rgba(15,15,15, 1);
+}
+
+/* Footer */
+.find-us-button {
+  border-radius:  5px;
+  transition: box-shadow 0.5s ease, transform 0.5s ease;
+}
+
+.find-us-icons {
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+  stroke: #27272a;
+}
+.find-us-button:hover .find-us-icons {
+  transform: scale(1.1);
+}
+
+.footer-list li {
+  position: relative;
+}
+
+.footer-list a::before {
+  content: '';
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  bottom: 6px;
+  left: -2px;
+  background: #27272a;
+  transition: 300ms;
+}
+
+.footer-list a::after {
+  content: '';
+  position: absolute;
+  width: 0px;
+  height: 2px;
+  left: -2px;
+  bottom: 6px;
+  background-color: #27272a; 
+  transition: 300ms;
+}
+.footer-list a:hover::after {
+  width: 115px;
+  transition: 300ms;
+}
+
+/* News Card */
+.news-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 6px;
+  background-size: cover;
+  background-position: center;
+  transition: background-size 0.5s ease;
+}
+.news-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: inherit;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease;
+  z-index: 0;
+}
+.news-card:hover::before {
+  transform: scale(1.15);
+  transition: transform 0.5s ease;
+}
+.news-card:active:before {
+  transform: scale(1.15);
+  transition: transform .1s ease;
+}
+.news-card-1 {
+  background-image: url('../../assets/place/restaurant-449952.jpg');
+}
+.news-card-2 {
+  background-image: url('../../assets/place/restaurant-805103.jpg');
+}
+
+/* Category */
+.category {
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.5s;
+}
+.category img {
+  transition: transform 0.5s;
+}
+.category:hover img {
+  transform: scale(1.1);
+  transition: transform 0.5s;
+}
+
+/* Button */
+.button{
+  position: relative;
+  transition: color 0.3s;
+}
+.button::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: black;
+  transition: all 0.5s;
+}
+
+.button:hover {
+  color: white;
+  transition: color 0.3s;
+}
+.button:hover::after {
+  height: 100%;
+  width: 100%;
+  transition: all 0.5s;
+  z-index: -1;
+}

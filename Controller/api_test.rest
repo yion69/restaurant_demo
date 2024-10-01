@@ -1,0 +1,6 @@
+# https://api.opencagedata.com/geocode/v1/json?q=16.809697,96.128314&key=92ac0036bce34d88a40710b8e76c017e&language=en&pretty=1
+### POST request to fetch food items
+POST http://localhost/C0S_108_Assignment/Controller/__foodItem.php
+Content-Type: application/x-www-form-urlencoded
+
+method=all

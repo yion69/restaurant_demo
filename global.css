@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .btn-hover {
+        @apply hover:fill-blue-700 hover:-translate-y-1 transition-all duration-200 
+    }
+    .flex-center {
+        @apply flex items-center justify-center
+    }
+    .navBtn-hover {
+        @apply hover:bg-zinc-200 hover:rounded-full transition-all duration-100 hover:scale-110
+    }
+    .navIcon-hover {
+        @apply hover:bg-zinc-200 transition-colors duration-200
+    }
+    
+    .box {
+        @apply grid grid-cols-[40%,60%] h-[256px] w-[504px] mx-auto border-2 border-zinc-900 rounded-xl
+    }
+    .div-img-container {
+        @apply border-r-2 border-zinc-900
+    }
+    .div-img {
+        @apply w-auto h-full object-cover object-left rounded-l-lg
+    }
+    .div-container {
+        @apply flex flex-col px-4 pt-4 font-front
+    }
+    .div-header {
+        @apply flex items-center text-2xl
+    }
+    .div-info-containers {
+        @apply  flex flex-col w-full h-1/4 my-2
+    }
+    .div-info-1 {
+        @apply w-full h-1/2 mb-1 flex items-center
+    }
+    .div-info-2 {
+        @apply w-full h-1/2 mb-1 flex items-center
+    }
+    .div-tag-containers {
+        @apply flex w-full h-1/6 my-2 gap-2
+    }
+    .div-tag-1 {
+        @apply flex-center w-20 h-6 rounded-full border-2 border-zinc-900
+    }
+    .div-tag-2 {
+        @apply flex-center w-20 h-6 gap-[3px] rounded-full border-2 border-zinc-900 text-sm
+    }
+    .div-lower-container {
+        @apply flex items-center justify-between w-full h-1/5 mt-auto mb-2
+    }
+    .div-price {
+        @apply text-2xl
+    }
+    .div-button-buy {
+        @apply flex-center gap-1 w-28 h-8 rounded-md text-sm text-zinc-100 bg-zinc-800
+    }
+
+}
+
+@font-face {
+    font-family: "notes";
+    src: url('./assets/Notes-1G5jj.ttf');
+}
+@font-face {
+    font-family: "GoldenState";
+    src: url("./assets/static/GoldenStateSerifPersonalRegular-drnGZ.otf");
+}
+@font-face {
+    font-family: "FrontPage";
+    src: url("./assets/static/FrontPageSupplement-RPvA.ttf");
+}
+@font-face {
+    font-family: "Fornire";
+    src: url("./assets/static/Fornire-Light.otf");
+}
+@font-face {
+    font-family: "Newsweekly";
+    src: url("./assets/static/newsweekly-Regular.ttf");
+}
+@font-face {
+    font-family: "Monsieur";
+    src: url("./assets/static/MonsieurLaDoulaise-Regular.ttf");
+}

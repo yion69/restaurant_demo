@@ -1,0 +1,13 @@
+{
+    "tailwindcss-intellisense.trace.server": "verbose",
+    "tailwindCSS.includeLanguages": {
+        "html": "html",
+        "javascript": "javascript",
+        "css": "css",
+        "php" : "php"
+    },
+    "editor.quickSuggestions": {
+        "strings": true
+    },
+    "tailwindCSS.experimental.configFile": null
+}
